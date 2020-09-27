@@ -1,0 +1,255 @@
+/* A bit of combined html, css, and js practice. I know it's incomplete :( . Thanks for viewing! */
+
+body {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+h1 {
+  position: fixed;
+  font-family: Arial;
+  font-size: 2em;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px gray;
+  letter-spacing: 5px;
+  word-spacing: 5px;
+}
+h2 {
+  position: fixed;
+  top: 60px;
+  font-family: Arial;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  visibility: hidden;
+  animation-name: visibility;
+  animation-delay: 1s;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+}
+h3 {
+  font-family: Arial;
+  font-size: 20px;
+  text-align: center;
+}
+span {
+  font-family: Arial;
+  font-size: 16px;
+  color: white;
+  text-align: left;
+  margin: 10px;
+}
+li {
+  line-height: 20px;
+}
+span#suntxt,
+span#mertxt,
+span#ventxt,
+span#eartxt,
+span#marstxt,
+span#jupitertxt,
+span#saturntxt,
+span#uranustxt {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+  display: none;
+}
+/* looks better without this box 
+#explanationbox {
+   position: fixed; 
+   bottom: 0;
+   right: 0;
+   height: 150px;
+   width: 300px;
+   border: 3px solid white;
+   display: none;
+} */
+@keyframes visibility {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+div#sun {
+  position: fixed;
+  top: 150px;
+  left: -100px;
+  height: 200px;
+  width: 200px;
+  background: radial-gradient(red, orange, yellow);
+  border-radius: 0 50% 50% 0;
+}
+div#mercury {
+  position: relative;
+  top: 240px;
+  left: 150px;
+  height: 25px;
+  width: 25px;
+  background: linear-gradient(-45deg, black, brown);
+  border-radius: 50% 50% 50% 50%;
+}
+#venus {
+  position: relative;
+  top: 210px;
+  left: 220px;
+  height: 38px;
+  width: 38px;
+  background: linear-gradient(-45deg, black, brown, #86b300, #e6b800);
+  border-radius: 50% 50% 50% 50%;
+}
+#earth {
+  position: relative;
+  top: 171px;
+  left: 320px;
+  height: 40px;
+  width: 40px;
+  background: linear-gradient(-45deg, black 10%, blue 10%, white);
+  border-radius: 50% 50% 50% 50%;
+}
+
+#mars {
+  position: relative;
+  top: 148px;
+  left: 380px;
+  height: 10px;
+  width: 10px;
+  background: linear-gradient(-45deg, black 10%, red 10%, white);
+  border-radius: 50% 50% 50% 50%;
+}
+
+#jupiter {
+  position: relative;
+  top: 108px;
+  left: 430px;
+  height: 70px;
+  width: 70px;
+  background: linear-gradient(-45deg, black 10%, red 10%, blue);
+  border-radius: 50% 50% 50% 50%;
+}
+
+#saturn {
+  position: relative;
+  top: 49px;
+  left: 540px;
+  height: 60px;
+  width: 60px;
+  background: linear-gradient(-45deg, black 10%, #4455 10%, blue);
+  border-radius: 50% 50% 50% 50%;
+}
+
+#uranus {
+  position: relative;
+  top: -1px;
+  left: 640px;
+  height: 55px;
+  width: 55px;
+  background: linear-gradient(-45deg, black 10%, yellow 10%, red);
+  border-radius: 50% 50% 50% 50%;
+}
+/* #ourmoon {
+  position: relative;
+  height: 10px;
+  width: 10px;
+  border-radius: 50% 50% 50% 50%;
+  background-color: gray;
+  animation-name: moonorbit;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+} */
+
+/* apologies to astronomers if this orbit is inaccurate */
+@keyframes moonorbit {
+  0% {
+    top: 137px;
+    left: 365px;
+  }
+  10% {
+    top: 139px;
+    left: 362px;
+    z-index: -1;
+  }
+  20% {
+    top: 140px;
+    left: 357px;
+    z-index: -1;
+  }
+  30% {
+    top: 141px;
+    left: 340px;
+    z-index: -1;
+  }
+  40% {
+    top: 142px;
+    left: 325px;
+    z-index: -1;
+  }
+  50% {
+    top: 142px;
+    left: 310px;
+    z-index: -1;
+  }
+  60% {
+    top: 142px;
+    left: 315px;
+    z-index: 1;
+  }
+  70% {
+    top: 141px;
+    left: 325px;
+    z-index: 1;
+  }
+  80% {
+    top: 140px;
+    left: 340px;
+    z-index: 1;
+  }
+  90% {
+    top: 139px;
+    left: 357px;
+    z-index: 1;
+  }
+  100% {
+    top: 137px;
+    left: 365px;
+    z-index: 1;
+  }
+}
+div#sun:hover {
+  border: 3px solid hsla(0, 80%, 80%, 0.8);
+  transform: scale(1.1, 1.1);
+}
+div#mercury:hover {
+  border: 3px solid hsla(0, 30%, 80%, 0.8);
+  transform: scale(1.1, 1.1);
+}
+div#venus:hover {
+  border: 3px solid hsla(60, 80%, 80%, 0.8);
+  transform: scale(1.2, 1.2);
+}
+div#earth:hover {
+  border: 3px solid hsla(190, 80%, 80%, 0.8);
+  transform: scale(1.2, 1.2);
+}
+div#mars:hover {
+  border: 3px solid hsla(190, 80%, 80%, 0.8);
+  transform: scale(1.2, 1.2);
+}
+
+div#jupiter:hover {
+  border: 3px solid hsla(190, 80%, 80%, 0.8);
+  transform: scale(1.2, 1.2);
+}
+
+div#saturn:hover {
+  border: 3px solid hsla(190, 80%, 80%, 0.8);
+  transform: scale(1.2, 1.2);
+}
+
+div#uranus:hover {
+  border: 3px solid hsla(190, 80%, 80%, 0.8);
+  transform: scale(1.2, 1.2);
+}
